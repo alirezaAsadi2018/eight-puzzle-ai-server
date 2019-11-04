@@ -1,9 +1,6 @@
 package Server;
 
-import Game.Board;
-import Game.Directions;
-import Game.WrongMoveException;
-
+import game.*;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -44,7 +41,7 @@ public class Main {
 
     private static Board InitBoard(DataInputStream dis, String... options) throws IOException {
         String size = dis.readUTF();
-        return new Board(Integer.valueOf(size), options);
+        return new Board(Integer.parseInt(size), options);
     }
 
     private static void doTurn(DataOutputStream dos, DataInputStream dis, Board board) throws IOException {

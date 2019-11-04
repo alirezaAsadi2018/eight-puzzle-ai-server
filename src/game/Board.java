@@ -1,4 +1,4 @@
-package Game;
+package game;
 
 import java.util.*;
 
@@ -14,7 +14,7 @@ public class Board {
         if (options[0].equals("input"))
             fillWithInput();
         if (options[0].equals("rand"))
-            randomFillBoard(Integer.valueOf(options[1]));
+            randomFillBoard(Integer.parseInt(options[1]));
     }
 
     private void fillWithInput() {
